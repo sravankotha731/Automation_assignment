@@ -11,7 +11,8 @@ describe("Automation Practice",()=>{
         })
     
     })
-    
+
+    //will create a account in automation practice website
     it("Signup",()=>{
         cy.createAccount(locator.createAaccount,email)
         cy.wait(4000)
@@ -20,6 +21,7 @@ describe("Automation Practice",()=>{
         cy.verifySignin(locator.name,customerName)  
     })
 
+    //product will add to cart and verify the added product
     it("AddtoCart & verifyProduct ",()=>{
         cy.AddtoCart(locator.addtoCart)
         cy.wait(4000)
@@ -29,6 +31,7 @@ describe("Automation Practice",()=>{
         cy.get(locator.checkout).click()
     })
 
+    //will verify and complete the summary and payment process
     it("Summary",()=>{
         for(let i=0;i<locator.summary.length;i++){
             cy.verifyText(locator.summary[i],locator.summarydata[i])
