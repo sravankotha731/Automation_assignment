@@ -39,19 +39,9 @@
         "AddToCart_btn" : "a[title='Add to cart']"
     },
     "name"  : ".account",
-    "productLoc" : [".layer_cart_product > h2",".layer_cart_product_info> #layer_cart_product_title",
-                   ".layer_cart_product_info > #layer_cart_product_attributes","#layer_cart_product_quantity","#layer_cart_product_price"],
-    "ProductText" : ["Product successfully added to your shopping cart","Faded Short Sleeve T-shirts","Orange, S","1","$16.51"],
     "checkout" : ".button-container > .button-medium",
     "close_window" : "span[title='Close window']",
-    "cartProduct" : ".cart_description > .product-name",
-    "avail" : ".label",
-    "summary" : [".cart_description > .product-name",".label","#total_product"],
-    "summarydata" : ["Faded Short Sleeve T-shirts","In stock","$16.51"],
-    "login" : ["#email","#passwd"],
-    "sucess_message":"p[class='alert alert-success']",
-    "message" : "Your order on My Store is complete.",
-    "payment" : {
+    "paymentOption" : {
         "cheque" :".cheque",
         "conformOrder" : "button[class='button btn btn-default button-medium']"
     },
@@ -60,5 +50,37 @@
         "checkbox" : "input[type='checkbox']",
         "processCarrier" : "button[name='processCarrier']"
     },
-    "ProceedToCheckout" : "a[title='Proceed to checkout']"
+    "ProceedToCheckout" : "a[title='Proceed to checkout']", 
+    "productLoc" :{
+        "successMessage" :".layer_cart_product > h2" ,
+        "productName" : ".layer_cart_product_info> #layer_cart_product_title",
+        "colorSize" : ".layer_cart_product_info > #layer_cart_product_attributes" ,
+        "quantity" : "#layer_cart_product_quantity",
+        "price" : "#layer_cart_product_price"
+    },
+    "ProductText" :{
+        "successMessage" : "Product successfully added to your shopping cart",
+        "productName" : "Faded Short Sleeve T-shirts",
+        "colorSize" : "Orange, S",
+        "quantity" : "1",
+        "price" : "$16.51"
+    },
+    "summary":{
+        "productName" :".cart_description > .product-name" ,
+        "available" : ".label",
+        "price" : "#total_product"
+    },
+    "summarydata" :{
+        "productName" : "Faded Short Sleeve T-shirts",
+        "available" : "In stock",
+        "price" : "$16.51"
+    },
+    "payment" : {
+        "sucess_message" : "p[class='alert alert-success']",
+        "price" : ".price > strong"
+    },
+    "paymentText" :{
+        "sucess_message" : "Your order on My Store is complete.",
+        "price" : "$18.51"
+    }
 }

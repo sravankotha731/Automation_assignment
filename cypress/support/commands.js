@@ -33,9 +33,9 @@ Cypress.Commands.add('AddtoCart',(addProduct)=>{
 
 //"verifyText" command will invoke the text from object and comapre with text
 Cypress.Commands.add('verifyText',(ProductLoc,ProductText)=>{
-    cy.get(ProductLoc).invoke('text').then((text1)=>{
-        expect(text1.replace("\n\t\t\t\t\t","").trimEnd()).to.eq(ProductText)
-    })
+    for(var property in ProductText){
+        cy.get(ProductLoc[property]).invoke('text').should('include',ProductText[property])
+    }
 })
 
 //"completeProcess" command will complete the checkout process in cart
@@ -46,9 +46,8 @@ Cypress.Commands.add('completeProcess',(locator)=>{
 })
 
 //"Payment" command will click the payment method and completes the process
-Cypress.Commands.add('Payment',(Paymentlocator)=>{
+Cypress.Commands.add('PaymentOption',(Paymentlocator)=>{
     for(var property in Paymentlocator){
         cy.get(Paymentlocator[property]).click()
     }
-    cy.verifyText(".price > strong","$18.51")
 })
