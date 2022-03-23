@@ -1,0 +1,64 @@
+{
+    "createAaccount":{
+        "signin" : ".login",
+        "emailCreate" : "#email_create",
+        "createAnAccount" : "#SubmitCreate"
+    },
+    "form":{
+        "cust_firstname" : "#customer_firstname",
+        "cust_lastname" : "#customer_lastname",
+        "password" : "#passwd",
+        "firstname" : "#firstname",
+        "lastname" : "#lastname",
+        "address" : "#address1",
+        "city" : "#city",
+        "state" : "#id_state",
+        "postcode" : "#postcode",
+        "country" : "#id_country",
+        "phone_number" : "#phone_mobile",
+        "alias" : "#alias"
+    },
+    "data":{
+        "cust_firstname" : "sravan",
+        "cust_lastname" : "kotha",
+        "password" : "Sravan@731",
+        "firstname" : "sravan",
+        "lastname" : "kotha",
+        "address" : "Dachepalli Guntur",
+        "city" : "Guntur",
+        "state" : "Alaska",
+        "postcode" : "52241",
+        "country" : "United States",
+        "phone_number" : "9874563210",
+        "alias" : "Dachepalli Guntur"
+    },
+    "register" : "#submitAccount",
+    "addtoCart" :{
+        "tShirt" : "[title='T-shirts']",
+        "product" : ".ajax_block_product", 
+        "AddToCart_btn" : "a[title='Add to cart']"
+    },
+    "name"  : ".account",
+    "productLoc" : [".layer_cart_product > h2",".layer_cart_product_info> #layer_cart_product_title",
+                   ".layer_cart_product_info > #layer_cart_product_attributes","#layer_cart_product_quantity","#layer_cart_product_price"],
+    "ProductText" : ["Product successfully added to your shopping cart","Faded Short Sleeve T-shirts","Orange, S","1","$16.51"],
+    "checkout" : ".button-container > .button-medium",
+    "close_window" : "span[title='Close window']",
+    "cartProduct" : ".cart_description > .product-name",
+    "avail" : ".label",
+    "summary" : [".cart_description > .product-name",".label","#total_product"],
+    "summarydata" : ["Faded Short Sleeve T-shirts","In stock","$16.51"],
+    "login" : ["#email","#passwd"],
+    "sucess_message":"p[class='alert alert-success']",
+    "message" : "Your order on My Store is complete.",
+    "payment" : {
+        "cheque" :".cheque",
+        "conformOrder" : "button[class='button btn btn-default button-medium']"
+    },
+    "process":{
+        "processAddress" : "button[name='processAddress']",   
+        "checkbox" : "input[type='checkbox']",
+        "processCarrier" : "button[name='processCarrier']"
+    },
+    "ProceedToCheckout" : "a[title='Proceed to checkout']"
+}
