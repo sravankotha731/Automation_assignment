@@ -11,6 +11,7 @@ describe("Automation Practice",()=>{
         })
     
     })
+    
     it("Signup",()=>{
         cy.createAccount(locator.createAaccount,email)
         cy.wait(4000)
