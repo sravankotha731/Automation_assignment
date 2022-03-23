@@ -45,7 +45,7 @@ describe("Automation Practice",()=>{
         }
         cy.get(locator.ProceedToCheckout).eq(1).click({force:true})
         cy.completeProcess(locator.process)
-        //verying text in payment page
+        //verifyng text in payment page
         for(let i=0;i<locator.summary.length;i++){
             cy.verifyText(locator.summary[i],locator.summarydata[i])
         }
