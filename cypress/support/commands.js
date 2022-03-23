@@ -1,3 +1,8 @@
+//will call baseURL
+Cypress.Commands.add('baseURL',()=>{
+    cy.visit("http://automationpractice.com/index.php")
+})
+
 //"createAccount" command will enter the email and click on the button.
 Cypress.Commands.add('createAccount',(locators,email)=>{
     for(var property in locators){

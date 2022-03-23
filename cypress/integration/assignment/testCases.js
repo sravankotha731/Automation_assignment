@@ -4,7 +4,7 @@ describe("Automation Practice",()=>{
     let random=Math.random()
     let email = `hehe${random}@gmail.com`
     before(()=>{
-        cy.visit("http://automationpractice.com/index.php")
+        cy.baseURL()
         cy.fixture("locators.json").then((locatorsA4)=>{
             locator = locatorsA4
             return locator
