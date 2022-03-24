@@ -39,7 +39,7 @@
         "AddToCart_btn": "a[title='Add to cart']"
     },
     "name": ".account",
-    "checkout": ".button-container > .button-medium",
+    "checkout": "a[title='Proceed to checkout']",
     "close_window": "span[title='Close window']",
     "paymentOption": {
         "cheque": ".cheque",
@@ -53,8 +53,8 @@
     "ProceedToCheckout": "a[title='Proceed to checkout']",
     "productLoc": {
         "successMessage": ".layer_cart_product > h2",
-        "productName": ".layer_cart_product_info> #layer_cart_product_title",
-        "colorSize": ".layer_cart_product_info > #layer_cart_product_attributes",
+        "productName": "span[class='product-name']",
+        "colorSize": "span[id='layer_cart_product_attributes']",
         "quantity": "#layer_cart_product_quantity",
         "price": "#layer_cart_product_price"
     },
