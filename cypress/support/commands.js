@@ -1,5 +1,6 @@
+//Commands for Assignment 2
 //will call baseURL
-Cypress.Commands.add('baseURL', () => {
+Cypress.Commands.add('A2baseURL', () => {
     cy.visit("http://automationpractice.com/index.php")
 })
 
@@ -49,5 +50,59 @@ Cypress.Commands.add('completeProcess', (locator) => {
 Cypress.Commands.add('PaymentOption', (Paymentlocator) => {
     for (var property in Paymentlocator) {
         cy.get(Paymentlocator[property]).click()
+    }
+})
+
+//Commands for Assignment 1
+//This command will call baseURL
+Cypress.Commands.add('A1baseURL', () => {
+    cy.visit("https://www.saucedemo.com/")
+})
+
+//'login' command will login with user ID and password
+Cypress.Commands.add('login',(loginLocator,loginID,passwordLocator,password)=>{
+    cy.get(loginLocator).type(loginID)
+    cy.get(passwordLocator).type(password)
+    cy.get("#login-button").click()
+})
+
+//'loginValidation' command with validate the different users login
+Cypress.Commands.add('loginValidation',(locator)=>{
+    for(let i=0;i<locator.data.length;i++){
+        cy.login(locator.login.username,locator.data[i].loginID,
+            locator.login.password,locator.data[i].password)
+        cy.verifyLogin()
+    }
+})
+
+//'verifyLogin' command will verify the url
+Cypress.Commands.add('verifyLogin',()=>{
+    cy.url().should('eq',"https://www.saucedemo.com/inventory.html")
+    cy.get("#react-burger-menu-btn").click()
+    cy.get("#logout_sidebar_link").click()
+})
+
+//'productToCart' command will add product to cart and will click on cart
+Cypress.Commands.add('productToCart',(addToCartLocator,cartLocator)=>{
+    cy.get(addToCartLocator).click()
+    cy.get(cartLocator).click()
+})
+
+//'sortLowToHigh' command will sort low to high 
+Cypress.Commands.add('sortLowToHigh',(filterLocator,elementLocator)=>{
+    cy.get(filterLocator)
+      .select(elementLocator)
+})
+
+//'removeAndVerify' command will remove the product and verify wheather it's removed
+Cypress.Commands.add('removeAndVerify',(removeLocator)=>{
+    cy.get(removeLocator).click()
+    cy.get('.cart_list').should("not.have.class",'cart_item')
+})
+
+//'verifyProduct' command will verify the product in cart
+Cypress.Commands.add('verifyProduct',(locator)=>{
+    for(var property in locator.yourCart){
+        cy.get(locator.yourCart[property]).contains(property==="productName"?"Sauce Labs Backpack":"29.99")
     }
 })

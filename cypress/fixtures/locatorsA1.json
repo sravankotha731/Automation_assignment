@@ -1,0 +1,37 @@
+{
+    "login" :{
+        "username" : "#user-name",
+        "password" : "#password"
+    },
+    "loginData":{
+        "username" : "standard_user",
+        "password" : "secret_sauce"
+    },
+    "productPage":{
+        "addTocart" : ":nth-child(1) > .inventory_item_description> .pricebar> .btn",
+        "cart"      : ".shopping_cart_link",
+        "filter"    : ".product_sort_container",
+        "elements"  : ["Name (A to Z)","Name (Z to A)","Price (low to high)","Price (high to low)"],
+        "menu"      : "#react-burger-menu-btn",
+        "logout"    : "#logout_sidebar_link"
+    },
+    "remove" : ".cart_list> .cart_item>>> .btn",
+    "yourCart":{
+        "productName" : ".inventory_item_name",
+        "productPrice" : ".inventory_item_price"
+    },
+    "data" :[
+        {
+            "loginID" : "standard_user",
+            "password" : "secret_sauce"
+        },
+        {
+            "loginID" : "problem_user",
+            "password" : "secret_sauce"
+        },
+        {
+            "loginID" : "performance_glitch_user",
+            "password" : "secret_sauce"
+        }
+    ]
+}
