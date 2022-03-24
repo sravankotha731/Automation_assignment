@@ -6,8 +6,8 @@ describe("Automation Practice", () => {
     before(() => {
         cy.baseURL()
         //loading locators data
-        cy.fixture("locators.json").then((locatorsA4) => {
-            locator = locatorsA4
+        cy.fixture("locators.json").then((locatorsA2) => {
+            locator = locatorsA2
             return locator
         })
 
